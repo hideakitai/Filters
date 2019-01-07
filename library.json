@@ -1,11 +1,11 @@
 {
-    "name": "CRC",
-    "keywords": "crc, utility",
-    "description": "CRC calculation for Arduino",
+    "name": "Filters",
+    "keywords": "lpf, hpf, integral, differential, utility",
+    "description": "Filter utilities for Arduino",
     "repository":
     {
         "type": "git",
-        "url": "https://github.com/hideakitai/CRC.git"
+        "url": "https://github.com/hideakitai/Filters.git"
     },
     "authors":
     {
@@ -13,7 +13,7 @@
         "url": "https://github.com/hideakitai",
         "maintainer": true
     },
-    "version": "0.1.0",
+    "version": "0.0.1",
     "license": "MIT",
     "frameworks": "*",
     "platforms": "*"
