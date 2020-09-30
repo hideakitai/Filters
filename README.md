@@ -33,8 +33,21 @@ void loop() {
     if (t > prev_t + 0.005) {
         float dt = t - prev_t;
         float v = 100.f * sin(t);
+
+        // reset to appropriate value to avoid overshoot
+        static bool is_initialized = false;
+        if (!is_initialized) {
+            i.reset(v);
+            d.reset(v);
+        }
         float v_i = i.get(v, dt);
         float v_d = d.get(v, dt);
+
+        // reset to appropriate value to avoid overshoot
+        if (!is_initialized) {
+            l.reset(v_d);
+            h.reset(v_d);
+        }
         float v_dl = l.get(v_d, dt);
         float v_dh = h.get(v_d, dt);
 
@@ -45,6 +58,7 @@ void loop() {
         Serial.print(v_dh); Serial.println();
 
         prev_t = t;
+        is_initialized = true;
     }
 }
 ```

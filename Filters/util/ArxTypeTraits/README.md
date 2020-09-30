@@ -14,7 +14,7 @@ C++ type_traits for Arduino which cannot use it as default
 
 ## Supported Class Templates
 
-### C++11 (defined only for platforms above which cannot use `type_traits`)
+### C++11 (defined only for boards before C++11)
 
 - `std::integral_constant`
 - `std::true_type`
