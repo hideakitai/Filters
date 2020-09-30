@@ -28,13 +28,15 @@ namespace Filter
         }
 
         template <typename U = T, typename std::enable_if<EMBEDDEDUTILS_HAS_FUNCTION(U, zero)>::type* = nullptr>
-        inline void reset() { buffer_ = U::zero(); }
+        inline void reset(const U& init = U::zero()) { buffer_ = init; }
 
         template <typename U = T, typename std::enable_if<EMBEDDEDUTILS_HAS_FUNCTION(U, setZero)>::type* = nullptr>
         inline void reset() { buffer_.setZero(N); }
+        template <typename U = T, typename std::enable_if<EMBEDDEDUTILS_HAS_FUNCTION(U, setZero)>::type* = nullptr>
+        inline void reset(const U& init) { buffer_ = init; }
 
         template <typename U = T, typename std::enable_if<std::is_floating_point<U>::value>::type* = nullptr>
-        inline void reset() { buffer_ = 0.0; }
+        inline void reset(const U& init = 0.0) { buffer_ = init; }
 
         inline void setGain(const T gain) { gain_ = gain; }
 
@@ -70,13 +72,15 @@ namespace Filter
         }
 
         template <typename U = T, typename std::enable_if<EMBEDDEDUTILS_HAS_FUNCTION(U, zero)>::type* = nullptr>
-        inline void reset() { buffer_ = U::zero(); }
+        inline void reset(const U& init = U::zero()) { buffer_ = init; }
 
         template <typename U = T, typename std::enable_if<EMBEDDEDUTILS_HAS_FUNCTION(U, setZero)>::type* = nullptr>
         inline void reset() { buffer_.setZero(N); }
+        template <typename U = T, typename std::enable_if<EMBEDDEDUTILS_HAS_FUNCTION(U, setZero)>::type* = nullptr>
+        inline void reset(const U& init) { buffer_ = init; }
 
         template <typename U = T, typename std::enable_if<std::is_floating_point<U>::value>::type* = nullptr>
-        inline void reset() { buffer_ = 0.0; }
+        inline void reset(const U& init = 0.0) { buffer_ = init; }
 
         inline void setGain(const double gain) { gain_ = gain; }
 
