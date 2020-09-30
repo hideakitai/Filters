@@ -2,8 +2,7 @@
 #ifndef EMBEDDEDUTILS_HELPER_H
 #define EMBEDDEDUTILS_HELPER_H
 
-#include <type_traits>
-
+#include "util/ArxTypeTraits/ArxTypeTraits.h"
 
 #define EMBEDDEDUTILS_DEFINE_MEMBER_CHECKER(member) \
     template<typename Type, typename Value = bool> \
