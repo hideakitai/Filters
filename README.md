@@ -66,7 +66,7 @@ void loop() {
 
 ## Embedded Libraries
 
-- [ArxTypeTraits v0.2.1](https://github.com/hideakitai/ArxTypeTraits)
+- [ArxTypeTraits v0.2.3](https://github.com/hideakitai/ArxTypeTraits)
 
 
 ## License
